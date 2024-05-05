@@ -1368,14 +1368,14 @@ impl cosmic::Application for CosmicAppList {
         let mut content = match &self.core.applet.anchor {
             PanelAnchor::Left | PanelAnchor::Right => container(
                 Column::with_children(content_list)
-                    .spacing(4.0)
+                    .spacing(self.config.spacing)
                     .align_items(Alignment::Center)
                     .height(h)
                     .width(w),
             ),
             PanelAnchor::Top | PanelAnchor::Bottom => container(
                 Row::with_children(content_list)
-                    .spacing(4.0)
+                    .spacing(self.config.spacing)
                     .align_items(Alignment::Center)
                     .height(h)
                     .width(w),

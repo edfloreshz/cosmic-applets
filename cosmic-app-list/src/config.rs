@@ -16,6 +16,7 @@ pub enum TopLevelFilter {
 pub struct AppListConfig {
     pub filter_top_levels: Option<TopLevelFilter>,
     pub favorites: Vec<String>,
+    pub spacing: u16,
 }
 
 impl AppListConfig {

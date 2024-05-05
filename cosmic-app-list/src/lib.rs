@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MPL-2.0-only
 mod app;
-mod config;
+pub mod config;
 mod localize;
 mod wayland_handler;
 mod wayland_subscription;
