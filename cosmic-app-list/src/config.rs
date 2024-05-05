@@ -20,6 +20,10 @@ pub struct AppListConfig {
 }
 
 impl AppListConfig {
+    pub fn cosmic_config() -> Option<Config> {
+        Config::new(APP_ID, Self::VERSION).ok()
+    }
+
     pub fn add_favorite(&mut self, id: String, config: &Config) {
         if !self.favorites.contains(&id) {
             self.favorites.push(id);
